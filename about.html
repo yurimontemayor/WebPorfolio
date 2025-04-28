@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Yuri Montemayor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #80dcbe, #58c4a2);
+      background-size: 200% 200%;
+      animation: gradientAnimation 8s ease infinite;
+      color: #555555;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-button {
+      align-self: flex-start;
+      margin: 20px;
+    }
+
+    .back-button button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #58c4a2;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button button:hover {
+      background-color: #555555;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #fff;
+      margin-bottom: 10px;
+      animation: slideInDown 1s ease;
+    }
+
+    .divider {
+      width: 60px;
+      height: 4px;
+      background-color: #fff;
+      margin: 0 auto 40px auto;
+      border-radius: 5px;
+      animation: growWidth 1s ease;
+    }
+
+    @keyframes slideInDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes growWidth {
+      from { width: 0; }
+      to { width: 60px; }
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+      max-width: 350px;
+      text-align: center;
+      animation: zoomIn 1.5s ease;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      background-color: #333;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: box-shadow 0.3s ease;
+      animation: fadeInText 2s ease;
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; transform: translateX(40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .about-text p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+      text-align: center;
+      animation: fadeIn 2.5s ease;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      margin: 0 15px;
+      transition: transform 0.2s ease, color 0.3s ease;
+    }
+
+    .social-icons i {
+      font-size: 28px;
+      color: #ffffff;
+      background-color: #555555;
+      padding: 10px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .fa-facebook:hover {
+      color: #fff;
+      background-color: #365899;
+      transform: scale(1.2);
+    }
+
+    .fa-github:hover {
+      color: #fff;
+      background-color: #6e5494;
+      transform: scale(1.2);
+    }
+
+    .fa-instagram:hover {
+      color: #fff;
+      background-color: #C13584;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      .about-image img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-button">
+    <a href="index.html">
+      <button><i class="fa fa-arrow-circle-left"></i> Back</button>
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>About Me</h1>
+    <div class="divider"></div>
+
+    <div class="about-section">
+      <div class="about-image">
+        <img src="./img/noback.png" alt="Yuri Montemayor">
+      </div>
+      <div class="about-text">
+        <p>
+          Hello, I’m <strong>Yuri Montemayor</strong>, a third-year college student currently pursuing a Bachelor of Science in Information Technology at Cavite State University. I am passionate about technology and continuously strive to expand my knowledge and skills in areas such as software development, web design, and IT solutions. I am committed to learning, growth, and contributing meaningfully to the field of Information Technology.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1CsK82F8XE/"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/yurimontemayor/work.git"><i class="fa fa-github"></i></a>
+          <a href="https://www.instagram.com/yowboi_yurii?igsh=MWVzOGszaDY4bGxueQ=="><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
